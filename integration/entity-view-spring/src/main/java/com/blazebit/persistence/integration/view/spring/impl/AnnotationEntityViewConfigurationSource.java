@@ -1,4 +1,3 @@
-nano integration/entity-view-spring/src/main/java/com/blazebit/persistence/integration/view/spring/impl/AnnotationEntityViewConfigurationSource.java
 /*
  * Copyright 2014 - 2024 Blazebit.
  *
@@ -56,10 +55,9 @@ public class AnnotationEntityViewConfigurationSource extends AbstractEntityViewC
     public AnnotationEntityViewConfigurationSource(AnnotationMetadata metadata, Class<? extends Annotation> annotation,
                                                    ResourceLoader resourceLoader, Environment environment) {
         super(environment);
-        Assert.notNull(metadata, "Metadata must not be null");
-        Assert.notNull(annotation, "Annotation must not be null");
-        Assert.notNull(resourceLoader, "ResourceLoader must not be null");
-
+        Assert.notNull(metadata,"metadata must not be null");
+        Assert.notNull(annotation,"annotation must not be null");
+        Assert.notNull(resourceLoader,"resourceLoader must not be null");
 
         this.attributes = new AnnotationAttributes(metadata.getAnnotationAttributes(annotation.getName()));
         this.configMetadata = metadata;
